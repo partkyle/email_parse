@@ -1,5 +1,6 @@
 Crossfit::Application.routes.draw do
   resources :emails
+  resources :parses
 
   root to: "home#index"
 

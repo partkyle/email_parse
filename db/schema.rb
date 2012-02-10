@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120210074812) do
+ActiveRecord::Schema.define(:version => 20120210080816) do
 
   create_table "emails", :force => true do |t|
     t.text     "headers"
@@ -29,6 +29,12 @@ ActiveRecord::Schema.define(:version => 20120210074812) do
     t.string   "spam_report"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "parses", :force => true do |t|
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

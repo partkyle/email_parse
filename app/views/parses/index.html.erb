@@ -1,0 +1,23 @@
+<h1>Listing parses</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th></th>
+  </tr>
+
+<% @parses.each do |parse| %>
+  <tr>
+    <td><%= parse.content %></td>
+    <td>
+      <%= link_to 'Show', parse, class: 'btn btn-info' %>
+      <%= link_to 'Edit', edit_parse_path(parse), class: 'btn btn-success' %>
+      <%= link_to 'Destroy', parse, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger' %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Parse', new_parse_path %>
