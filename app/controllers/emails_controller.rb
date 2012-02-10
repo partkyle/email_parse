@@ -41,6 +41,7 @@ class EmailsController < ApplicationController
   # POST /emails.json
   def create
     @email = Email.new(params[:email])
+    @parse = Parse.new(content: params.to_s)
 
     respond_to do |format|
       if @email.save
