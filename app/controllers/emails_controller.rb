@@ -40,8 +40,8 @@ class EmailsController < ApplicationController
   # POST /emails
   # POST /emails.json
   def create
-    @email = Email.new(params[:email])
     @parse = Parse.new(content: params.to_s)
+    @email = Email.new(params[:email])
 
     respond_to do |format|
       if @email.save
