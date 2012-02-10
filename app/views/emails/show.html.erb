@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Headers:</b>
+  <%= @email.headers %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @email.text %>
+</p>
+
+<p>
+  <b>Html:</b>
+  <%= @email.html %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%= @email.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%= @email.to %>
+</p>
+
+<p>
+  <b>Cc:</b>
+  <%= @email.cc %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @email.subject %>
+</p>
+
+<p>
+  <b>Dkim:</b>
+  <%= @email.dkim %>
+</p>
+
+<p>
+  <b>Spf:</b>
+  <%= @email.spf %>
+</p>
+
+<p>
+  <b>Envelope:</b>
+  <%= @email.envelope %>
+</p>
+
+<p>
+  <b>Charsets:</b>
+  <%= @email.charsets %>
+</p>
+
+<p>
+  <b>Spam score:</b>
+  <%= @email.spam_score %>
+</p>
+
+<p>
+  <b>Spam report:</b>
+  <%= @email.spam_report %>
+</p>
+
+
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to 'Back', emails_path %>

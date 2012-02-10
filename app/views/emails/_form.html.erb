@@ -1,0 +1,112 @@
+<%= form_for @email do |f| %>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:headers) %>">
+    <%= f.label :headers %>
+    <div class="input">
+      <%= f.text_area :headers %>
+      <%= f.errors_for :headers %>
+    </div>
+  </div>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:text) %>">
+    <%= f.label :text %>
+    <div class="input">
+      <%= f.text_area :text %>
+      <%= f.errors_for :text %>
+    </div>
+  </div>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:html) %>">
+    <%= f.label :html %>
+    <div class="input">
+      <%= f.text_area :html %>
+      <%= f.errors_for :html %>
+    </div>
+  </div>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:from) %>">
+    <%= f.label :from %>
+    <div class="input">
+      <%= f.text_field :from %>
+      <%= f.errors_for :from %>
+    </div>
+  </div>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:to) %>">
+    <%= f.label :to %>
+    <div class="input">
+      <%= f.text_field :to %>
+      <%= f.errors_for :to %>
+    </div>
+  </div>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:cc) %>">
+    <%= f.label :cc %>
+    <div class="input">
+      <%= f.text_field :cc %>
+      <%= f.errors_for :cc %>
+    </div>
+  </div>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:subject) %>">
+    <%= f.label :subject %>
+    <div class="input">
+      <%= f.text_field :subject %>
+      <%= f.errors_for :subject %>
+    </div>
+  </div>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:dkim) %>">
+    <%= f.label :dkim %>
+    <div class="input">
+      <%= f.text_field :dkim %>
+      <%= f.errors_for :dkim %>
+    </div>
+  </div>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:spf) %>">
+    <%= f.label :spf %>
+    <div class="input">
+      <%= f.text_field :spf %>
+      <%= f.errors_for :spf %>
+    </div>
+  </div>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:envelope) %>">
+    <%= f.label :envelope %>
+    <div class="input">
+      <%= f.text_area :envelope %>
+      <%= f.errors_for :envelope %>
+    </div>
+  </div>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:charsets) %>">
+    <%= f.label :charsets %>
+    <div class="input">
+      <%= f.text_field :charsets %>
+      <%= f.errors_for :charsets %>
+    </div>
+  </div>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:spam_score) %>">
+    <%= f.label :spam_score %>
+    <div class="input">
+      <%= f.number_field :spam_score %>
+      <%= f.errors_for :spam_score %>
+    </div>
+  </div>
+
+  <div class="clearfix <%= "error" if f.has_errors?(:spam_report) %>">
+    <%= f.label :spam_report %>
+    <div class="input">
+      <%= f.text_field :spam_report %>
+      <%= f.errors_for :spam_report %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.button class: "btn btn-primary" %>
+    <%= link_to 'Cancel', emails_path, class: "btn" %>
+  </div>
+
+<% end %>

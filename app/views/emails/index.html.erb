@@ -1,0 +1,47 @@
+<h1>Listing emails</h1>
+
+<table>
+  <tr>
+    <th>Headers</th>
+    <th>Text</th>
+    <th>Html</th>
+    <th>From</th>
+    <th>To</th>
+    <th>Cc</th>
+    <th>Subject</th>
+    <th>Dkim</th>
+    <th>Spf</th>
+    <th>Envelope</th>
+    <th>Charsets</th>
+    <th>Spam score</th>
+    <th>Spam report</th>
+    <th></th>
+  </tr>
+
+<% @emails.each do |email| %>
+  <tr>
+    <td><%= email.headers %></td>
+    <td><%= email.text %></td>
+    <td><%= email.html %></td>
+    <td><%= email.from %></td>
+    <td><%= email.to %></td>
+    <td><%= email.cc %></td>
+    <td><%= email.subject %></td>
+    <td><%= email.dkim %></td>
+    <td><%= email.spf %></td>
+    <td><%= email.envelope %></td>
+    <td><%= email.charsets %></td>
+    <td><%= email.spam_score %></td>
+    <td><%= email.spam_report %></td>
+    <td>
+      <%= link_to 'Show', email, class: 'btn btn-info' %>
+      <%= link_to 'Edit', edit_email_path(email), class: 'btn btn-success' %>
+      <%= link_to 'Destroy', email, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger' %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Email', new_email_path %>
